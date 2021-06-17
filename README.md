@@ -43,3 +43,4 @@
   + 京东APP扫码获取cookie(执行`node getJDCookie.js`即可)
 
 ## 通知频道 [https://t.me/jd_script](https://t.me/jd_script)
+## 讨论组 [https://t.me/jd_scripts_talk](https://t.me/jd_scripts_talk)
