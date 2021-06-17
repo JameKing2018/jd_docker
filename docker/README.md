@@ -1,7 +1,7 @@
 ![Docker Pulls](https://img.shields.io/docker/pulls/lxk0301/jd_scripts?style=for-the-badge)
 ### Usage
 ```diff
-+ 2021-03-21更新 增加bot交互，spnode指令，功能是否开启自动根据你的配置判断，详见 https://gitee.com/lxk0301/jd_docker/pulls/18
++ 2021-03-21更新 增加bot交互，spnode指令，功能是否开启自动根据你的配置判断
  **bot交互启动前置条件为 配置telegram通知，并且未使用自己代理的 TG_API_HOST** 
  **spnode使用前置条件未启动bot交互**   _（后续可能去掉该限制_ 
  使用bot交互+spnode后 后续用户的cookie维护更新只需要更新logs/cookies.conf即可
@@ -20,7 +20,7 @@
 +原理说明：1、定时调用 /scripts/docker/auto_help.sh collect 收集各个活动的助力码，整理、去重、排序、保存到 /scripts/logs/sharecodeCollection.log;
         2、（由于linux进程限制，父进程无法获取子进程环境变量）在每次脚本运行前，在当前进程先调用 /scripts/docker/auto_help.sh export 把助力码注入到环境变量
 
-+ 2021-02-21更新 https://gitee.com/lxk0301/jd_scripts仓库被迫私有，老用户重新更新一下镜像：https://hub.docker.com/r/lxk0301/jd_scripts)(docker-compose.yml的REPO_URL记得修改)后续可同步更新jd_script仓库最新脚本
++ 2021-02-21更新 仓库被迫私有.(docker-compose.yml的REPO_URL记得修改)后续可同步更新jd_script仓库最新脚本
 + 2021-02-10更新 docker-compose里面,填写环境变量 SHARE_CODE_FILE=/scripts/logs/sharecode.log, 多账号可实现自己互助(只限sharecode.log日志里面几个活动),注:已停用,请使用2021-03-9更新
 + 2021-01-22更新 CUSTOM_LIST_FILE 参数支持远程定时任务列表 (⚠️务必确认列表中的任务在仓库里存在)
 + 例1:配置远程crontab_list.sh, 此处借用 shylocks 大佬的定时任务列表, 本仓库不包含列表中的任务代码, 仅作示范
@@ -223,7 +223,7 @@ jd_scripts
  `docker-compose logs` 打印日志；  
  `docker-compose logs -f` 打印日志，-f表示跟随日志；  
  `docker logs -f jd_scripts` 和上面两条相比可以显示汉字；  
- `docker-compose pull` 更新镜像；多容器用户推荐使用`docker pull lxk0301/jd_scripts`；  
+ `docker-compose pull` 更新镜像；多容器用户推荐使用`docker pull zhaozhanzhan/jd_scripts`；  
  `docker-compose stop` 停止容器；  
  `docker-compose restart` 重启容器；  
  `docker-compose down` 停止并删除容器；  

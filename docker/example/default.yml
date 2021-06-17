@@ -1,5 +1,5 @@
 jd_scripts:
-  image: lxk0301/jd_scripts
+  image: zhaozhanzhan/jd_scripts
   # 配置服务器资源约束。此例子中服务被限制为使用内存不超过200M以及cpu不超过0.2（单核的20%）
   # 经过实际测试，建议不低于200M
   # deploy:
@@ -19,7 +19,7 @@ jd_scripts:
     - "raw.githubusercontent.com:151.101.228.133"
   environment:
     #脚本更新仓库地址，配置了会切换到对应的地址
-    - REPO_URL=git@gitee.com:lxk0301/jd_scripts.git
+    - REPO_URL=git@gitee.com:zhaozhanzhan520/jd_docker.git
     # 注意环境变量填写值的时候一律不需要引号（""或者''）下面这些只是示例，根据自己的需求增加删除
     #jd cookies
     # 例: JD_COOKIE=pt_key=XXX;pt_pin=XXX;
