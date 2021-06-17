@@ -1,6 +1,6 @@
 {
   "name": "jd_docker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}",
   "main": "index.js",
   "scripts": {
